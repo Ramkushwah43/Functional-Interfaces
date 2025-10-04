@@ -3,10 +3,9 @@ class TestPredicateDemo
 {
 	public static void main(String args[])
 	{
-		PredicateDemo<Integer> even1 = a->a%2==0;
-		
-		PredicateDemo<Integer> odd1 = a->a%2!=0;
-		
+		//PredicateDemo Interface Implements
+		PredicateDemo<Integer> even1 = a-> a%2==0;
+		PredicateDemo<Integer> odd1 = a-> a%2!=0;
 		PredicateDemo<Integer> prime1 = a->{
 			if(a<=1)return false;
 			for(int i=2;i<=Math.sqrt(a);i++)
@@ -26,13 +25,9 @@ class TestPredicateDemo
 			return a1==s;
 		};
 		
-		
-		
-		
-		Predicate<Integer> even = a->a%2==0;
-		
-		Predicate<Integer> odd = a->a%2!=0;
-		
+		//Predicate Interface Implements
+		Predicate<Integer> even = a -> a%2==0;
+		Predicate<Integer> odd = a -> a%2!=0;
 		Predicate<Integer> prime = a->{
 			if(a<=1)return false;
 			for(int i=2;i<=Math.sqrt(a);i++)
@@ -52,6 +47,7 @@ class TestPredicateDemo
 			return a1==s;
 		};
 		
+		//Input for checking...
 		int n =101;
 		
 		System.out.println("DemoPredicate ---------------------------------");
@@ -65,8 +61,7 @@ class TestPredicateDemo
 		System.out.println(n+" is NOT Even OR Odd  : "+even1.or(odd1).negate().test(n));//false
 		System.out.println(n+" is NOT Even And Odd  : "+even1.and(odd1).negate().test(n));//true
 		
-		
-		System.out.println("Predicate ---------------------------------");
+		System.out.println("Predicate -------------------------------------");
 		
 		System.out.println(n+" is Even or Not : "+even.test(n));//false
 		System.out.println(n+" is Odd or Not : "+odd.test(n));//true
@@ -76,11 +71,12 @@ class TestPredicateDemo
 		System.out.println(n+" is Even OR Odd  : "+even.or(odd).test(n));//true
 		System.out.println(n+" is NOT Even OR Odd  : "+even.or(odd).negate().test(n));//false
 		System.out.println(n+" is NOT Even And Odd  : "+even.and(odd).negate().test(n));//true
-		
 	}
 }
 
 /**
+
+OUTPUT : 
 
 DemoPredicate ---------------------------------
 101 is Even or Not : false
