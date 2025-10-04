@@ -28,6 +28,7 @@ public interface PredicateDemo<T>
 		return value-> !this.test(value);
 	}
 	
+	//Internal Working of isEqual() method
 	public static <T>PredicateDemo<T> isEqual(String str)
 	{
 		//isEquals() method internally use equals() method they are overidden in String class 
