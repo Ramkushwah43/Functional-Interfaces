@@ -1,5 +1,6 @@
 import java.util.function.Function;
 
+//TestFunctionDemo class checking for this same working Function interface or not
 public class TestFunctionDemo
 {
     public static void main(String[] args) 
