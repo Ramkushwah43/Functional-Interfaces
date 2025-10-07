@@ -6,6 +6,7 @@ class TestConsumerDemo
 	{
 		// -------- PREDEFINED CONSUMER FUNCTION ----------
 		System.out.println("----------REDEFINED CONSUMER FUNCTION------------");
+		
 		Consumer<String> c1 = a -> System.out.println(a); 		
 		Consumer<Integer> c2 = a -> System.out.println("Value Of Variable : "+a);
 		Consumer<Integer> c3 = b -> System.out.println("Value Of Variable : "+b);
@@ -17,6 +18,7 @@ class TestConsumerDemo
 		
 		// ----------USER-REDEFINED CONSUMERDEMO FUNCTION------------
 		System.out.println("----------USER-REDEFINED CONSUMERDEMO FUNCTION------------");
+		
 		ConsumerDemo<String> c11 = a -> System.out.println(a); 
 		ConsumerDemo<Integer> c22 = a -> System.out.println("Value Of Variable : "+a);
 		ConsumerDemo<Integer> c33 = b -> System.out.println("Value Of Variable : "+b);
@@ -27,3 +29,25 @@ class TestConsumerDemo
 		c55.accept(11);
 	}
 }
+
+/**
+OUTPUT : 
+
+----------REDEFINED CONSUMER FUNCTION------------
+Value Of Variable : 10
+Value Of Variable : 10
+Value Of Variable : 11
+Value Of Variable : 11
+Value Of Variable : 11
+Value Of Variable : 11
+Value Of Variable : 11
+----------USER-REDEFINED CONSUMERDEMO FUNCTION------------
+Value Of Variable : 10
+Value Of Variable : 10
+Value Of Variable : 11
+Value Of Variable : 11
+Value Of Variable : 11
+Value Of Variable : 11
+Value Of Variable : 11
+
+**/
