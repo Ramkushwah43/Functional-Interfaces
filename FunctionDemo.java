@@ -5,6 +5,7 @@
 
 public interface FunctionDemo<T,R>
 {
+	//One Abstract Method R apply(T t);
 	public abstract R apply(T t);
 	
 	//Internal working of andThen() method
