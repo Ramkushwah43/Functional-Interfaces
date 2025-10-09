@@ -9,15 +9,15 @@ class TestIntSupplierDemo
 		Consumer<Integer> c1 = value -> System.out.println("Supplier s1 : "+value);
 		Consumer<Integer> c2 = value -> System.out.println("Supplier s2 : "+value);
 		
-		c1.accept(s1.get());
-		c2.accept(s2.get());
+		c1.accept(s1.getAsInt());
+		c2.accept(s2.getAsInt());
 		
-		IntSupplierDemo<Integer> sd1 = ()->1001;
-		IntSupplierDemo<Integer> sd2 = ()->1002;
+		IntSupplierDemo sd1 = ()->1001;
+		IntSupplierDemo sd2 = ()->1002;
 		ConsumerDemo<Integer> cd1 = value -> System.out.println("Supplier sd1 : "+value);
 		ConsumerDemo<Integer> cd2 = value -> System.out.println("Supplier sd2 : "+value);
 		
-		cd1.accept(sd1.get());
-		cd2.accept(sd2.get());
+		cd1.accept(sd1.getAsInt());
+		cd2.accept(sd2.getAsInt());
 	}
 }
